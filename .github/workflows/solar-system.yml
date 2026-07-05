@@ -26,9 +26,9 @@ jobs:
             node-version: 20
 
         - name: Cache NPM dependencies
-          uses: actions/cache@v4
+          uses: actions/cache@v3
           with:
-            path: node-modules
+            path: node_modules
             key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
     
         - name: Install Dependencies
